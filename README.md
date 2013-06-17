@@ -19,15 +19,11 @@ This is a very simple experiment. It starts with work devided equally between th
 This Method is very nieve and simple. Its not true work stealing as the work is parted at the start. However, its simple enough to give a result. In basic testing, work stealing increased the performance by 8-11% on tests data sets of ~2500 & 5000.
 
 The table below includes the raw tests stats:
-
- Workers | Problem Size | Work Stealing | Time (seconds) | Delta % over not stealing
- 8 | 2547 | Not Stealing | 23.523 | -- 
- 8 | 2547 | Stealing | 21.74 | 8.24% 
- 8 | 5000 | Not Stealing | 48.245 | -- 
- 8 | 5000 | Stealing | 43.124 | 11.8% 
  
-   | First Header  | Second Header |
-	| ------------- | ------------- |
-	| Content Cell  | Content Cell  |
-	| Content Cell  | Content Cell  |
+| Workers  | Problem Size | Work Stealing | Time (seconds) | Delta % over not stealing | 
+| ------------- | ------------- | ------------- | ------------- | ------------- | 
+| 8 | 2547 | Not Stealing | 23.523 | -- |
+| 8 | 2547 | Stealing | 21.74 | 8.24% |
+| 8 | 5000 | Not Stealing | 48.245 | -- |
+|  8 | 5000 | Stealing | 43.124 | 11.8% |
 
