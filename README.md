@@ -27,3 +27,8 @@ The table below includes the raw tests stats:
 | 8 | 5000 | Not Stealing | 48.245 | -- |
 |  8 | 5000 | Stealing | 43.124 | 11.8% |
 
+## Credits 
+This is built mostly on the work of others:
+
+- Prime Factorisation routine - Dave Herrn http://www.coderenaissance.com/2011/06/finding-prime-factors-in-javascript.html
+- Web workers code - Feross Aboukhadijeh - https://github.com/feross/md5-password-cracker.js
