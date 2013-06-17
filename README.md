@@ -1,4 +1,4 @@
-js-work-stealing
+Work Stealing in Javascript.
 ================
 
 Nieve work-stealing implementation built ontop of javascript web workers. This code uses prime factorisation as an example problem. Effectively, it factors a list of 5000 15 digit numbers in parralel. The workstealing method increases performance by up to ~12%.
