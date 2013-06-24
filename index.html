@@ -2,7 +2,87 @@
 	<head>
 		<title>Work Stealing Web Workers</title>
 		<script src="coordinator.js"></script>
+		<link rel="stylesheet" type="text/css" href="screen.css">
+		
 	</head>
 	<body>
+		<h1>Work Stealing &amp; parallel processing in Javascript</h1>
+		<p>This page contains a series of examples to demonstrate parallel computation in Javascript. Each example completes the same problem (factoring 15 digit numbers), the only variables are the problem size and the method. For a description of the methods, please view the <a href="">blog post (link required)</a>.</p>
+		
+		<h2>Factorisation Examples - <button class="runall">Run All</button></h2>
+		<p>This table contains a range of tests, to run each test press "Run Test", or to run all the tests selecting "Run All" above. Just to note, the very slowest test, is not run automatically as it may take over 5 minutes to run!</p> 		
+		<div class="example">
+			<table>
+				<tbody>
+				<tr>
+					<th>Workers</th>
+					<th>Problem Size</th>
+					<th>Work Stealing</th>
+					<th>Time (seconds)</th>
+					<th>Delta % over Not stealing</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>2500</td>
+					<td>--</td>
+					<td id="test-2500-false-1" class="test" data-size="2500" data-stealing="false" data-workers="1"><button>Run Test</button></td>
+					<td>n/a</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>5000</td>
+					<td>n/a</td>
+					<td id="test-5000-false-1" class="test" data-size="5000" data-stealing="false" data-workers="1"><button>Run Test</button></td>
+					<td>(this test is very slow!)</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>2500</td>
+					<td>No</td>
+					<td id="test-2500-false-8" class="test allsuite"  data-size="2500" data-stealing="false" data-workers="8"><button>Run Test</button></td>
+					<td >n/a</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>2500</td>
+					<td>Yes</td>
+					<td id="test-2500-true-8" class="test allsuite" data-size="2500" data-stealing="true" data-workers="8">
+						<button>Run Test</button>
+					</td>
+					<td class="delta" data-slow="test-2500-false-8", data-fast="test-2500-true-8">--</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>5000</td>
+					<td>No</td>
+					<td  id="test-5000-false-8" class="test allsuite" data-size="5000" data-stealing="false" data-workers="8">
+						<button>Run Test</button>
+					</td>
+					<td>n/a</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>5000</td>
+					<td>Yes</td>
+					<td id="test-5000-true-8" class="test allsuite" data-size="5000" data-stealing="true" data-workers="8">
+						<button>Run Test</button>
+					</td>
+					<td class="delta" data-slow="test-5000-false-8", data-fast="test-5000-true-8">--</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<h2>Logs</h2>
+		<div id="log">
+		</div>
+		
+		
+		
+		
+		
+		
+	
 	</body>
+	<script src="ui.js"></script>
 </html>
